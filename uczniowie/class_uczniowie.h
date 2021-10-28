@@ -10,6 +10,7 @@ public:
 	string pesel;
 	string klasa;
 	int ocena;
+	int* tab;
 	
 	void wyswietl(void);
 
@@ -21,7 +22,13 @@ public:
 		this->pesel = pesel;
 		this->klasa = klasa;
 		this->ocena = ocena;
-				}
+		this->tab = new int[100];
+	}
+
+	~uczniowie() {
+		delete[] tab;
+		cout << "Dzia³a destruktor" << endl;
+	}
 
 	uczniowie() {
 		cout << "dzia³a konstruktor2 " << endl;
