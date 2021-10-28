@@ -13,8 +13,29 @@ public:
 	
 	void wyswietl(void);
 
+	uczniowie(string imie, string naz, int w, string pesel, string klasa, int ocena) {
+		cout << "dzia³a konstruktor 1"<<endl;
+		this->imie = imie;
+		this->nazwisko = naz;
+		this->wiek = w;
+		this->pesel = pesel;
+		this->klasa = klasa;
+		this->ocena = ocena;
+				}
 
-	
+	uczniowie() {
+		cout << "dzia³a konstruktor2 " << endl;
+		this->imie = "brak";
+		this->nazwisko = "brak";
+		this->wiek = 0;
+		this->pesel = "brak";
+		this->klasa = "brak";
+		this->ocena = 0;
+	}
+
+
+
+
 	void wprowadz( void ) {
 		cout << "Podaj imiê:";
 		cin >> this->imie;
